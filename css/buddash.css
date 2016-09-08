@@ -1,0 +1,502 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
+
+/*html, body{
+  overflow-x: hidden;
+  overflow-y: hidden;	
+}*/
+
+body{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: #ccc;`
+
+  overflow-x: hidden;
+  overflow-y: hidden;  
+}
+
+header{
+	height: 80%;
+	position: absolute;
+}
+
+footer{
+	height: 20%;
+	background: rgba(0, 0, 0,0.3);	
+	width: 100%;	
+	position: absolute;
+	bottom: 0;
+}
+
+a{
+	text-decoration: none;
+	color: initial;	
+	display: inline-block;
+}
+
+a img{
+	display: inline-block; /* a modifier pour block*/
+	width: 80px;
+	height: 80px;
+	border-radius: 5px;
+
+	z-index: 10;
+	/*box-shadow: 0px 0px 10px 0px  #8D8D8D;*/
+}
+
+ul{
+
+	height: 95px;
+	margin:0;
+	padding: 0;
+	list-style-type: none;
+	display: inline-block;
+
+	width: 80%;
+}
+
+li{
+	display: inline-block;
+	float: left;
+}
+
+/*  ---------------------     Contenair  --------------------------------------- */
+
+
+
+.containt{
+	padding: 30px;
+	display: inline-block;
+
+	margin-top: 80px;
+}
+
+
+/*  ---------------------     bloc elft  --------------------------------------- */
+
+	.bloc-left{
+		width: 100px;
+		background-color: #ccc;
+
+		display: inline-block;
+	}
+		.bloc-left img{
+			position: absolute;
+			top: 30%;	
+			opacity: 0.3;
+		}	
+/*  ---------------------    block rigth  --------------------------------------- */
+
+	.bloc-rigth{
+		display: inline-block;	
+		width: 960px;
+		overflow: hidden;	
+	}
+/*  #BLOC1 --------------------------------------- */
+
+		.daily{
+			/*width: 920px;*/
+			margin: 20px;
+		}
+
+			.daily a{
+				/*display: block;*/
+				float: left;
+			} 
+
+			.daily ul li{
+				position: relative;
+			}	
+
+			.daily ul a:hover{
+				transition-duration: 0.2s;
+				transform: scale(1.1);
+			} 	
+			.daily li{
+				margin-left: 30px;
+			}
+			.daily p{
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					font-size: small;
+				}					
+			/*  survol zone daily & titre daily--------------------------------------- */
+	
+			.daily ul:hover .addlist{
+				display: inline-block;
+			}				
+/*			.daily>span>a:hover{
+				margin-top: -25px;
+				transition-duration: 0.2s;
+			}*/							
+					
+/*  #BLOC2 --------------------------------------- */
+
+		.weekly{
+			/*width: 400px;*/			
+			margin: 20px;
+		}
+			.weekly a{
+				/*display: block;*/
+				float: left;
+			} 
+			.weekly ul li{ 
+				position: relative;
+			}			
+			.weekly ul a:hover{
+				transition-duration: 0.2s;
+				transform: scale(1.1);
+			} 	
+			.weekly li{
+				margin-left: 30px;
+			}	
+			.weekly p{
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					font-size: small;
+				}				
+			/*  survol zone weekly & titre weekly--------------------------------------- */
+
+			.weekly ul:hover .addlist{
+				display: inline-block;
+			}						
+/*			.weekly>span>a:hover{
+				margin-top: -10px;
+				transition-duration: 0.2s;
+			}*/
+/*  #BLOC3 --------------------------------------- */
+
+		.monthly{
+			/*width: 400px;*/
+			margin: 20px;
+		}
+			.monthly a{
+				/*display: block;*/
+				float: left;
+			} 	
+			.monthly ul li{
+				position: relative;
+			}				
+			.monthly ul a:hover{
+				transition-duration: 0.2s;
+				transform: scale(1.1);
+			} 	
+			.monthly li{
+				margin-left: 30px;
+			}	
+			.monthly p{
+					margin: 0;
+					padding: 0;
+					text-align: center;
+					font-size: small;
+				}				
+			/*  survol zone monthly & titre monthly--------------------------------------- */			
+			.monthly ul:hover .addlist{
+				display: inline-block;
+			}
+/*			.monthly>span>a:hover{
+				margin-top: -10px;
+				transition-duration: 0.2s;
+			}*/				
+/*  Title of Blocks  --------------------------------------- */
+
+		.title{
+			 display: inline-block;
+			 width: 80px;
+			 line-height: 80px;
+			 text-align: right;	
+			 vertical-align: middle;
+			 border-radius: 5px;
+		}				
+
+/*  ---------------------     footer  --------------------------------------- */
+
+.foot{
+	padding: 30px;
+}
+
+	.foot ul a:hover{
+		transition-duration: 0.2s;
+		transform: scale(1.1);
+	} 	
+	.foot li{
+		margin-left: 30px;
+	} 
+			.foot ul li{
+				position: relative;
+			}
+				footer span:hover .ico{
+					margin-left: -10px;				
+					transition-duration: 0.2s;
+				 	opacity: 1;
+				}	
+					footer .foot ul:hover .addlist{
+						display: inline-block;
+					}	
+						footer .foot p{
+								margin: 0;
+								padding: 0;
+								text-align: center;
+								font-size: small;
+							}								
+/*  #AUTRE --------------------------------------- */
+
+.color-0{
+	background: #FEFEFE;
+}
+.color-2{
+	background: #0F3C51;
+}
+.color-1{
+	background: #D03015;
+}
+.color-3{
+	background: #323232;
+}
+.color-4{
+	background: #076800;
+}
+.color-6{
+	background: url("img/background_2.jpg")  no-repeat center center fixed;
+}
+/*  ... --------------------------------------- */
+.text-yellow{
+	color: #ECBD08;
+}
+.text-white{
+	color: #FFF;
+}
+/*  ... --------------------------------------- */
+.display-none{
+	display: none;
+}
+
+.display-block{
+	display: block;
+}
+
+.display-il-block{
+	display: inline-block;
+}
+/*  ... --------------------------------------- */
+.opacity-0{
+	opacity: 0;
+}
+.opacity-1{
+	opacity: 0;
+}
+/*  #ADD NEW ITEM --------------------------------------- */
+.addlist {
+	display: inline-block;
+	width: 80px;
+	line-height: 80px;
+	background-color: rgba(255, 255, 255,0.3);	
+	text-align: center;
+	font-size-adjust: 1.8;	
+	font-weight: lighter;
+	border-radius: 4px;
+	user-select: none; 
+	cursor: pointer; 
+	transition-duration: 0.3s; 
+
+	display: none;
+}
+		.addlist::before{
+			content: "+";
+			color: #fff;
+		}
+
+			.addlist:hover{
+				transition-duration: 0.2s;
+				transform: scale(1.1);
+			}		
+
+/*  DELETE ITEM & RENAME ITEM ICONE (action) --------------------------------------- */
+
+.ico{
+	width: 40px;
+	display: inline-block;
+	margin-left: -40px;
+	position: relative;
+	top: -25px;
+	opacity: 0;       /* !!!!!!!!!!!!!!!!!!!!!!!!!! icones*/
+	text-align: center;
+}	
+	.ico img{
+		width: 15px;
+		height: 15px;
+		margin-left: 5px;
+	}		
+			span:hover .ico{
+				transition-duration: 0.2s;
+			 	margin-top: -15px;
+			 	opacity: 1;
+			}				
+
+/*   DELETE ITEM & RENAME ITEM ICONE Elements --------------------------------------- */
+
+.icoaction{
+		position: absolute;
+		top: 15px;
+		left: 15px;
+
+		z-index: 100;
+
+		display: none;
+}
+
+	.icoaction img{
+		width: 50px;
+		height: 50px;
+	}
+
+.icoaction1{
+		position: absolute;
+		top: 15px;
+		left: 15px;
+
+		z-index: 99;
+
+		display: none;
+}
+
+	.icoaction1 img{
+		width: 50px;
+		height: 50px;
+	}
+
+
+
+
+/*  ---------------------     AddFile BOX  --------------------------------------- */
+.addfile{
+	background: #DADADA;
+	width: 350px;
+	position: absolute;
+	top: 0;
+	left: -300px;
+
+	/*display: none;*/
+	z-index: 10;
+	-moz-box-shadow: 5px 5px 5px 0px  #9b9b9b;
+	-webkit-box-shadow: 5px 5px 5px 0px  #9b9b9b;
+	-o-box-shadow: 5px 5px 5px 0px  #9b9b9b;
+	box-shadow: 5px 5px 5px 0px  #9b9b9b;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color= #9b9b9b, Direction=134, Strength=5);	
+
+	display: none;
+}
+/*  ...  --------------------------------------- */
+
+	.addfile .addfile-body{
+		margin: 0 auto;
+		padding: 10px;
+	}
+
+	.addfile .addfile-title{
+		color: #B1B1B1;
+		font-size: x-large;
+		padding: 10px;
+		background: #fff;
+	}	
+
+		.addfile .addfile-title a{
+			float: right;
+			background: #BBBBBB;
+			font-size: small;
+			text-align: center;
+			vertical-align: middle;
+			padding: 10px;
+			line-height: 8px;
+			border-radius: 50%;
+		}	
+		.addfile .addfile-title a:hover{
+			color: #fff;
+		    font-style: bold;
+			transition-duration: 0.1s;
+			transform: scale(1.2);
+			background: rgba(231, 76, 60,1.0)
+		}			
+/*  ...  --------------------------------------- */
+
+		.addfile .addfile-body .addfile-body-container{
+			/*border-bottom: 1px solid #4E4E4E;*/	
+		}	
+/*  ...  --------------------------------------- */
+
+		.addfile .addfile-body .addfile-body-container .addfile-img-icone-container{
+			width: 100%;
+			display: inline-block;
+		}
+			.addfile .addfile-body .addfile-body-container .addfile-img-icone-container img{
+				border-radius: 10px;
+				display: inline-block;
+				margin-left: 80px;
+			}
+
+		.addfile .addfile-body .addfile-body-container .addfile-img-icone-container .addfile-img-icone-btns-container{
+			display: inline-block;
+			float: right;
+		}	
+			.addfile .addfile-body .addfile-body-container .addfile-img-icone-container .addfile-img-icone-btns-container a{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				line-height: 20px;
+				background: #BBBBBB;
+				padding: 5px;
+				margin: 4px;
+				border-radius: 4px;
+				border-bottom: 2px solid #4E4E4E;
+				font-size: small;
+				transition-duration: 0.2s;
+			}	
+				.addfile .addfile-body .addfile-body-container .addfile-img-icone-container .addfile-img-icone-btns-container a:hover{
+					transform: scale(1.1);
+				}				
+
+/*  INPUTS --------------------------------------- */
+	.addfile .addfile-body .addfile-body-container .inputsaddfile {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+		.addfile .addfile-body .addfile-body-container .inputsaddfile input[type="text"]{
+				    line-height: 25px;
+				    background: #ecf0f1;
+					padding: 10px;
+					width: 250px;
+					margin: 5px;
+
+					border-radius: 10px;
+					border: 0;
+
+					transition-duration: 0.3s;
+			}
+
+				.addfile .addfile-body .addfile-body-container .inputsaddfile input[type="text"]:focus{
+						background-color: rgba(189, 195, 199,1.0);
+					}
+
+			.addfile .addfile-body .addfile-body-container .inputsaddfile input[type="button"]{
+					background: #BBBBBB;
+					border: none;
+					border-bottom: 4px solid #4E4E4E;
+					width: 200px;
+					margin-top: 10px;
+					line-height: 40px;
+					color: #000;
+					border-radius: 4px;
+					transition-duration: 0.2s;
+
+				}
+				.addfile .addfile-body .addfile-body-container .inputsaddfile input[type="button"]:hover{
+						transform: scale(1.1);
+					}
+
+/*  ... --------------------------------------- */
+
+
