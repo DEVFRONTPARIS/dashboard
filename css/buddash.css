@@ -377,7 +377,7 @@ li{
 	width: 350px;
 	position: absolute;
 	top: 0;
-	/*left: -300px;*/
+	left: -300px;
 
 	/*display: none;*/
 	z-index: 10;
@@ -387,7 +387,7 @@ li{
 	box-shadow: 5px 5px 5px 0px  #9b9b9b;
 	filter:progid:DXImageTransform.Microsoft.Shadow(color= #9b9b9b, Direction=134, Strength=5);	
 
-	/*display: none;*/
+	display: none;
 }
 /*  ...  --------------------------------------- */
 

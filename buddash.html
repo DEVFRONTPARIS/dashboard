@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Document</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/jqui/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 		<link rel="stylesheet" type="text/css" href="css/animate.css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/buddash.css">
@@ -27,8 +27,8 @@
 						</div>
 					</div>				
 					<div class="inputsaddfile">
-						<input type="text" name="title" id="site-name">
-						<input type="text" name="url" id="site-url" value="http://">
+						<input type="text" name="title" id="site-name" value="L'équipe.fr">
+						<input type="text" name="url" id="site-url" value="lequipe.fr">
 						<input type="button" name="addimage" value="Add item !" id="addimg">
 					</div>
 				</div>
@@ -48,8 +48,8 @@
 								<a href="#" id="edit-action" class="rename-item"><img src="img/pen.png" alt="delecte"></a>
 							</div>
 						</span>
-						<ul>
-							<li>
+						<ul id="sortable1" class="connectedSortable">
+							<li class="ui-state-default">
 								<a href="#"><img src="img/icons/angellist.png" alt="image par défaut"></a>
 								<p>
 									Angel list
@@ -63,7 +63,7 @@
 									</div>
 								</span>
 							</li>
-							<li>
+							<li class="ui-state-default">
 								<a href="#"><img src="img/icons/dispatch.png" alt="image par défaut"></a>
 								<p>
 									Dispatch
@@ -77,7 +77,7 @@
 									</div>
 								</span>
 							</li>
-							<li>
+							<li class="ui-state-default">
 								<a href="#"><img src="img/icons/connect.png" alt="image par défaut"></a>
 								<p>
 									Connect
@@ -91,7 +91,7 @@
 									</div>
 								</span>
 							</li>
-							<li>
+							<li class="ui-state-default">
 								<a href="#"><img src="img/icons/litmus.png" alt="image par défaut"></a>
 								<p>
 									Litmus
@@ -116,8 +116,8 @@
 								<a href="#" id="edit-action-1" class="rename-item"><img src="img/pen.png" alt="delecte"></a>
 							</div>
 						</span>
-						<ul>
-							<li>
+						<ul id="sortable2" class="connectedSortable">
+							<li class="ui-state-highlight">
 								<a href="#"><img src="img/icons/feedly.png" alt="image par défaut"></a>
 								<p>
 									Feedly
@@ -142,8 +142,8 @@
 								<a href="#" id="edit-action-2" class="rename-item"><img src="img/pen.png" alt="delecte"></a>
 							</div>
 						</span>
-						<ul>
-							<li>
+						<ul id="sortable1"  class="connectedSortable">
+							<li class="ui-state-default">
 								<a href="#"><img src="img/icons/ted.png" alt="image par défaut"></a>
 								<p>
 									TED
