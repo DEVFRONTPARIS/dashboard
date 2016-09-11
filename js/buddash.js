@@ -1,4 +1,3 @@
-
 $(function(){	
 // localStorage.clear(); 	
 									 /***********************************************
@@ -8,9 +7,6 @@ $(function(){
     $( "#sortable1, #sortable2" ).sortable({
       connectWith: ".connectedSortable"
     }).disableSelection();
-
-
-
 	// initialisation de variables --------------------------------------- 	
 	var maxId = 0;	
 		// pret pour compter élements stocker (set)	si stocké, on enregistre !
@@ -21,7 +17,7 @@ $(function(){
 		var siteName= site[0]; // SITE NAME
 		var siteURL= site[1]; // URL
 		var locationBoard = site[2]; // Cible puis, -> dernière ligne on enregistre via localstorage car en premier c'estait l'affichage ici on enregistre l'élément afficher !
-		$('.'+locationBoard+' ul').prepend('<li><a href="'+siteURL+'"><img alt="'+siteURL+' "src="http://logo.clearbit.com/'+siteURL+'" class="animated zoomIn"></a><p>'+siteName+'</p><span> <div class="icoaction"><a id="delete-it" href="#"><img alt="trash" src="img/delitem.png"></a> </div> <div class="icoaction1"><a id="edit-it" href="#"><img alt="trash" src="img/edititem.png"></a> </div> </span> </li>');	
+		$('.'+locationBoard+' ul').prepend('<li id="'+maxId+'"><a href="'+siteURL+'"><img alt="'+siteURL+' "src="http://logo.clearbit.com/'+siteURL+'" class="animated zoomIn"></a><p>'+siteName+'</p><span> <div class="icoaction"><a id="delete-it" href="#"><img alt="trash" src="img/delitem.png"></a> </div> <div class="icoaction1"><a id="edit-it" href="#"><img alt="trash" src="img/edititem.png"></a> </div> </span> </li>');	
 	}					
 									 /*****************************************
 									   BOUTTONS EDITER ET SUPPRIMER UNE IMAGE 
@@ -88,7 +84,7 @@ $('.rename-item').on('click', function(){
 				  		// Ajout Clé et valeurs d'une nouvelle donnée dans le local storage
 						localStorage.setItem(maxId, siteName+','+siteURL+','+monbloc); // Valeurs nom site etc
 						localStorage.setItem('maxId',maxId); // Mise du compteur des clés (Total)						
-				    	$(locationBoard).parent().prepend('<li><a href="'+siteURL+'"><img alt="'+siteURL+' "src="http://logo.clearbit.com/'+siteURL+'" class="animated zoomIn"></a><p>'+siteName+'</p><span> <div class="icoaction"><a id="delete-it" href="#"><img alt="trash" src="img/delitem.png"></a> </div> <div class="icoaction1"><a id="edit-it" href="#"><img alt="trash" src="img/edititem.png"></a> </div> </span> </li>');
+				    	$(locationBoard).parent().prepend('<li id="'+maxId+'"><a href="'+siteURL+'"><img alt="'+siteURL+' "src="http://logo.clearbit.com/'+siteURL+'" class="animated zoomIn"></a><p>'+siteName+'</p><span> <div class="icoaction"><a id="delete-it" href="#"><img alt="trash" src="img/delitem.png"></a> </div> <div class="icoaction1"><a id="edit-it" href="#"><img alt="trash" src="img/edititem.png"></a> </div> </span> </li>');
 						$('#logo-preview').attr({ src: 'http://logo.clearbit.com/'+siteURL, alt: 'Logo URL'});			     													    	
 				    } else{
 				    	// alert('Petit gourmand: \n' + 'Je n\'autorise pas plus de 5 icones !!!');
@@ -107,14 +103,14 @@ $('.rename-item').on('click', function(){
 						} else {
 								return false
 							}
-					$(this).parent().parent().remove();
-					var maxId = localStorage.getItem('maxId');
-					alert(maxId);
-					maxId-localStorage; //TOTAL LISTE on lui dit enlève le dernier element dans le tableau	
-					alert(maxId);				
-					localStorage.setItem('maxId',maxId-1); // Mise à jour du maxid on lui dit enlève un chiffre du total  car un element viens d'être supprimer !	
+					$(this).parent().parent().remove();						
+					// ELEMENT - on supprime l'élement par son attribut ID
+					maxId = $(this).parent().parent().attr('id'); // a enregistrer en local egaletment avec la methode get URL
 					localStorage.removeItem(maxId); // on peut supprimer le bon id 
-
+					// CLE    - pour eviter que lorsqu'un supprime un élement qu'en rajoutant un autre on n'est 3 au lieu de 2 !
+					maxId --;
+					// COMPTEUR -  le compteur est remis à jour 					
+					localStorage.setItem('maxId',maxId); // Mise du compteur des clés (Total)				
 	});
 	// EDITER IMAGE --------------------------------------- 
 	$(document).on('click','.icoaction1', function(){
@@ -161,6 +157,7 @@ $('.bloc-left').on('click', function(){
 			});
 			$('.color-5').on('click', function(){
 				$('body').removeClass('color-0 color-1 color-2 color-3 color-4').addClass('color-5');
+
 			});	
 
 			$('.remove-theme').on('click', function(){
